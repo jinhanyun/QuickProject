@@ -61,6 +61,7 @@ public final class GlobalConfig {
         Resource resource = resourceLoader.getResource(configPath);
         if (!resource.exists()) {
             throw new GlobalConfigException(configParamName, "路径不存在");
+
         }
         try {
             return resource.getFile();
