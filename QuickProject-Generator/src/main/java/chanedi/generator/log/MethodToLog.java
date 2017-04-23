@@ -9,14 +9,8 @@ import java.util.HashMap;
  */
 class MethodToLog extends HashMap {
 
-    private String methodName;
-
     public MethodToLog(String returnType, String methodName, String argStr) {
-        if (returnType.contains("List")) {
-            put("isList", true);
-        } else {
-            put("isList", false);
-        }
+        put("isList",returnType.contains("List"));
         put("methodName", methodName);
         String[] argNames = argStr.split(",");
         for (int i = 0; i < argNames.length; i++) {

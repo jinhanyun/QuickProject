@@ -8,11 +8,7 @@ import java.util.HashMap;
 class DaoReturnToLog extends HashMap {
 
     public DaoReturnToLog(String variableType, String variable, String methodName) {
-        if (variableType.contains("List")) {
-            put("isList", true);
-        } else {
-            put("isList", false);
-        }
+        put("isList",variableType.contains("List"));
         put("methodName", methodName);
         put("variable", variable);
     }
