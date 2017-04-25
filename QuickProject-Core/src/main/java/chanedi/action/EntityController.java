@@ -36,6 +36,7 @@ import java.util.Map;
  */
 public abstract class EntityController {
 
+
     public abstract String getIndexTilesName();
 
     public abstract EntityService getEntityService();
